@@ -19,7 +19,7 @@ export async function main(event, context) {
     await dynamoDbLib.call("put", params);
     return success(params.Item);
   } catch (e) {
-      console.log('e caught in main:', e)
+      console.log('e caught in main:', e);
     return failure({ status: false });
   }
 }
